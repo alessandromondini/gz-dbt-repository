@@ -28,9 +28,9 @@ sources:
                  
          - name: ship
            identifier: raw_gz_ship
-           description: ship costs by order_id
+           description: ship costs by orders_id
            columns:
-             - name: order_id
+             - name: orders_id
                description: primary key of the table
                tests:
                  - unique
