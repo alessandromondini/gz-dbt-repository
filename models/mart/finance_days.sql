@@ -1,3 +1,5 @@
+{{ config(materialized='table') }}
+
 SELECT int_orders_operational.date_date,
 COUNT(int_orders_operational.orders_id) AS tot_number_of_transactions,
 ROUND(SUM(int_orders_operational.revenue), 2) AS revenue,
