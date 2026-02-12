@@ -1,5 +1,4 @@
 version: 2
-
 sources:
    - name: raw #Renaming as an alias
      schema: gz_raw_data #Path of the table in BQ
