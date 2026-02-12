@@ -1,0 +1,16 @@
+Select DATE_TRUNC(date_date, month) AS date_month,
+SUM(revenue) AS revenue,
+SUM(tot_number_of_transactions) AS tot_number_of_transactions,
+SUM(tot_quantity_of_products_sold) AS tot_quantity_of_products_sold,
+SUM(revenue)/SUM(tot_number_of_transactions) AS average_basket,
+SUM(margin) AS margin,
+SUM(shipping_fee) AS shipping_fee,
+SUM(log_cost) AS log_cost,
+SUM(ship_cost) AS ship_cost,
+SUM(operational_margin) AS operational_margin,
+SUM(ads_cost) AS ads_cost,
+SUM(ads_margin) AS ads_margin,
+SUM(impressions) AS ads_impressions,
+SUM(clicks) AS ads_clicks,
+FROM {{ ref('finance_campaigns_days') }}
+GROUP BY date_month
